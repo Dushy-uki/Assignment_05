@@ -1,0 +1,32 @@
+.nav{
+   background-color: rgb(55, 64, 146);
+   height: 50px;
+    padding: 100;
+    border-radius: 50px;
+    width: 80%;
+    margin-left: 150px;
+}
+.sign{
+    background-color: rgb(75, 230, 217);
+    border-radius: 20px;
+    width: 90px;
+    text-align: center;
+}
+.sec2{
+    background-image: url(./image/49a69ca6-36c3-445b-8787-7c2cfc150300.jpg);
+   width: 1500px;
+    height: 600px;
+    padding: 100;
+    background-repeat: no-repeat;
+    background-color: rgb(212, 248, 248);
+}
+.btn{
+    background-color: rgb(20, 53, 53);
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+}
+.journey{
+    background-color: rgba(8, 159, 179, 0.767);
+    height: 600px;
+}
