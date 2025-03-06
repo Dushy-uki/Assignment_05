@@ -35,4 +35,11 @@
     height: 500px;
     width: 900px;
 }
+.sign{
+    background-color: rgb(204, 207, 209);
+    width: 900px;
+    height: 700px;
+    margin-left: 440px;
+    padding-top: 90px;
+}
 
