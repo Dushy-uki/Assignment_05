@@ -9,12 +9,21 @@
 </head>
 <body>
     <div class="sign">
+        <form id="signupForm">
         <h1 class="text-3xl "><b>Signup Page</b></h1>
-        <input type="text" id="" placeholder="Name" class="w-90 h-10 border-2 border-black-600 rounded-lg ml-12 mt-6"><br>
-        <input type="text" id="" placeholder="Email" class="w-90 h-10 border-2 border-black-600 rounded-lg ml-12 mt-10"><br>
-        <input type="text" id="" placeholder="Password" class="w-90 h-10 border-2 border-black-600 rounded-lg ml-12 mt-10"><br>
-        <button type="button" class="bg-indigo-600 text-white rounded-lg w-100 mt-40 ml-16 h-10 shadow-2xl">Signup</button><br>
-        <input type="checkbox" class="mt-6 mr-2 ml-12">Remember Me
+        <input type="text" id="name" placeholder="Name" class="w-90 h-10 border-2 border-black-600 rounded-lg ml-12 mt-6"><br>
+        <input type="text" id="email" placeholder="Email" class="w-90 h-10 border-2 border-black-600 rounded-lg ml-12 mt-10"><br>
+        <input type="text" id="password" placeholder="Password" class="w-90 h-10 border-2 border-black-600 rounded-lg ml-12 mt-10"><br>
+        <button type="submit" class="bg-indigo-600 text-white rounded-lg w-100 mt-10 ml-16 h-10">Signup</button><br>
+        <input type="checkbox" class="mt-6 mr-2 ml-12">Remember Me<br>
+        
+    </form>
+
+    <p id="savedName"></p>
+    <p id="savedEmail"></p>
+
+    <button type="button" id="clearData" class="bg-indigo-600 text-white rounded-lg w-100 mt-17 ml-16 h-10 shadow-2xl">Clear</button>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
