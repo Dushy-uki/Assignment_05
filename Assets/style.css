@@ -6,7 +6,7 @@
     width: 85%;
     margin-left: 110px;
 }
-.sign{
+.sign2{
     background-color: rgb(75, 230, 217);
     border-radius: 20px;
     width: 90px;
@@ -41,5 +41,6 @@
     height: 800px;
     margin-left: 440px;
     padding-top: 90px;
+    text-align: center;
 }
 
