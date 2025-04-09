@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener   ("DOMContentLoaded", () => {
     const signupForm = document.getElementById("signupForm");
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
@@ -46,4 +46,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
+function checkStrength() {
+    const password = document.getElementById('password').value;
+    const msg = document.getElementById('strengthMsg');
+
+    if (password.length < 6) {
+      msg.textContent = 'Too short!';
+      msg.style.color = 'red';
+    } else if (password.match(/[A-Z]/) && password.match(/[0-9]/)) {
+      msg.textContent = 'Strong!';
+      msg.style.color = 'green';
+    } else {
+      msg.textContent = 'Weak!';
+      msg.style.color = 'orange';
+    }
+  }
 

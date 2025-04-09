@@ -13,7 +13,8 @@
         <h1 class="text-3xl "><b>Signup Page</b></h1>
         <input type="text" id="name" placeholder="Name" class="w-90 h-10 border-2 border-black-600 rounded-lg ml-12 mt-6"><br>
         <input type="text" id="email" placeholder="Email" class="w-90 h-10 border-2 border-black-600 rounded-lg ml-12 mt-10"><br>
-        <input type="text" id="password" placeholder="Password" class="w-90 h-10 border-2 border-black-600 rounded-lg ml-12 mt-10"><br>
+        <input type="password" id="password" placeholder="Password" onkeyup="checkStrength()" class="w-90 h-10 border-2 border-black-600 rounded-lg ml-12 mt-10"><br>
+        <p id="strengthMsg"></p>
         <button type="submit" class="bg-indigo-600 text-white rounded-lg w-100 mt-10 ml-16 h-10">Signup</button><br>
         <input type="checkbox" class="mt-6 mr-2 ml-12">Remember Me<br>
         

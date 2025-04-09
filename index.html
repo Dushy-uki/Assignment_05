@@ -10,6 +10,19 @@
 </head>
 <body>
 
+    <style>
+        .cls{
+    background-color: black;
+    color: white;
+    padding: 15px;
+  }
+        .hover-image{
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    transition: all 0.3s ease;
+  }
+    </style>
+
     <!--section1-->
     
        <div class="flex pb-7">
@@ -24,6 +37,7 @@
             <a href="#Service">Service</a>
             <a href="#about">About us</a>
             <h2>Contact</h2>
+            <a href="./galary.html">Gallery</a>
            <a href="./signup.html" class="sign2 ml-145">Signup</a>
         </nav>
     </div>
@@ -52,13 +66,14 @@
                         aliquam
                         quisquam cupiditate magni blanditiis molestias temporibus nam neque error!</h1>
                 </div>
-                <div class="w-90 h-120 shadow-2xl ml-15 bg-cyan-700 rounded-3xl">
+                <div class="w-90 h-135 shadow-2xl ml-15 bg-cyan-700 rounded-3xl">
     
                     <img src="./Assets/image/about2.png" class="w-50 ml-18 mt-14 h-50">
                     <h1 class="text-center text-2xl mt-9  text-white"><b>Best Packages</b></h1>
                     <h1 class="mt-9 text-center  text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed
                         aliquam
-                        quisquam cupiditate magni blanditiis molestias temporibus nam neque error!</h1>
+                        quisquam cupiditate magni blanditiis molestias temporibus nam neque error!</h1><br>
+                        <button id="btn" class="ml-30 bg-white rounded-md w-30">Details</button>
                 </div>
                 <div class="w-90 h-120 shadow-2xl ml-15 bg-cyan-700 rounded-3xl">
                     <img src="./Assets/image/about3.png" class="w-50 ml-18 mt-14 h-50">
@@ -79,12 +94,14 @@
         </div>
 
         <!--section4-->
-    <div class="flex pt-35" id="Service">
+        <button onclick="darkMood()" class="bg-sky-500/75 h-10 rounded-lg mt-30 p-4 text-white ml-210">DarkMood</button>
+    <div class="mycls flex pt-35" id="Service">
         <div>
             <button class="bg-sky-500/75 mt-40 text-white rounded-lg w-50 ml-40">OUR TOUR PACKAGES</button>
             <h1 class="text-4xl mt-5 font-bold ml-40"><b>POPULAR <br> DESTINATIONS</b></h1>
         </div>
-        <div class="flex">
+        <div class="flex ">
+            
             <img src="./Assets/image/bali.jpeg" class="w-100 h-100 ml-15 rounded-xl">
             <img src="./Assets/image/france.jpeg" class="w-100 h-100 ml-5 rounded-xl">
             <img src="./Assets/image/egy.jpeg" class="w-100 h-100 ml-5 rounded-xl">
@@ -94,7 +111,7 @@
     <!--section5-->
     <div class="mt-35 flex">
         <img src="./Assets/image/beach.webp" class="w-200 h-150 rounded-xl ml-40 z-10 absolute">
-        <img src="./Assets/image/beach2.jpeg" class="w-100 h-80 rounded-xl mt-60 relative z-30"  style="left: 500px; top: 260px;">
+        <img src="./Assets/image/beach2.jpeg" id="myimage" class="w-100 h-80 rounded-xl mt-60 relative z-30"  style="left: 500px; top: 260px;">
         <div class="one mt-70 ml-100 bg-cyan-700">
             <div class=" flex">
             <img src="./Assets/image/tour1.png" class="w-20 h-30 ml-55 mt-6"><h1 class="text-white ml-5 mt-18"><b>Sunny Day Tour</b></h1>
@@ -108,9 +125,12 @@
         </div>
     </div>
 
+    
+
     <!--section6-->
     <div class="footer">
       <img src="./Assets/image/logo1.png" style="width: 230px; height: 80px;" class="ml-190 mt-55">
+      <button onclick="scrollToTop()" class="bg-cyan-600 ml-410 rounded-lg mt-15 h-10">Scroll to Top</button>
     </div>
     <div class="flex pt-20 bg-cyan-600  w-screen mt-15">
         <div class="w-100 pl-45">
@@ -154,5 +174,28 @@
     </div>
     <footer class="bg-indigo-950 text-white w-screen pl-40 p-6 pt-4"><span class="font-bold">XTRAVEL</span> All right
         <span class="ml-280">organized by uki cohourt 11</span></footer>
+
+
+
+        <script>
+            function darkMood() {
+              let element = document.getElementById("Service");
+              element.classList.toggle("cls");
+            };
+
+            const img = document.getElementById('myimage');
+            
+            img.addEventListener('mouseover', () => {
+            img.classList.add('hover-image');
+        });
+
+              img.addEventListener('mouseout', () => {
+              img.classList.remove('hover-image');
+            });
+
+            function scrollToTop() {
+      window.scrollTo(0, 0); 
+    }
+          </script>
 </body>
 </html>

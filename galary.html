@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"/>
+  <style>
+    .imgbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 100px;
+      margin-top: 50px;
+    }
+    .box {
+      height: 420px;
+      width: 420px;
+      font-size: 40px;
+      box-shadow: 5px 5px #888888;
+    }
+    .btn1 {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn1:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sec4" id="port">
+    <p class="text-secondary text-center mt-4">Gallery</p>
+    <div class="d-flex justify-content-center mt-4" id="button">
+      <button class="btn1" onclick="filterImages('all')">All</button>
+      <button class="btn1" onclick="filterImages('beach')">Beach</button>
+      <button class="btn1" onclick="filterImages('mountain')">Mountain</button>
+      <button class="btn1" onclick="more()">More</button>
+    </div>
+
+    <div class="imgbox" id="product">
+      <div class="image" data-type="beach"><img src="./Assets/image/beach5.jpeg" class="box"></div>
+      <div class="image" data-type="beach"><img src="./Assets/image/beach6.jpeg" class="box"></div>
+      <div class="image" data-type="mountain"><img src="./Assets/image/moun4.jpeg" class="box"></div>
+      <div class="image" data-type="beach"><img src="./Assets/image/beach7.jpeg" class="box"></div>
+      <div class="image" data-type="mountain"><img src="./Assets/image/moun2.jpeg" class="box"></div>
+      <div class="image" data-type="beach"><img src="./Assets/image/beach.webp" class="box"></div>
+      <div class="image" data-type="mountain"><img src="./Assets/image/mounton.avif" class="box"></div>
+      <div class="image" data-type="beach"><img src="./Assets/image/beacg8.jpg" class="box"></div>
+    </div>
+  </div>
+
+  <script>
+    function filterImages(type) {
+      const images = document.querySelectorAll('.image');
+
+      images.forEach(img => {
+        const imgType = img.getAttribute('data-type');
+        
+        if (type === 'all' || imgType === type) {
+          img.style.display = 'block';
+        } else {
+          img.style.display = 'none';
+        }
+      });
+    }
+
+    function more(){
+      window.alert("Comming soon");
+    }
+  </script>
+
+</body>
+</html>
